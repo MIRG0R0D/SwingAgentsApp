@@ -1,0 +1,76 @@
+package swing;
+
+import backend.Mission;
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class SecretDialog extends JDialog {
+    private JPanel contentPane;
+    private JButton buttonOK;
+    private JButton buttonCancel;
+    private JLabel missionNameField;
+    private JTable table1;
+    private JTable table2;
+    private JButton button1;
+    private JButton button2;
+    private MiniTableModel leftTable;
+    private MiniTableModel rightTable;
+
+    public SecretDialog(Mission input) {
+        setContentPane(contentPane);
+        setModal(true);
+        getRootPane().setDefaultButton(buttonOK);
+
+        buttonOK.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onOK();
+            }
+        });
+
+        buttonCancel.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onCancel();
+            }
+        });
+
+        // call onCancel() when cross is clicked
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                onCancel();
+            }
+        });
+
+        // call onCancel() on ESCAPE
+        contentPane.registerKeyboardAction(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onCancel();
+            }
+        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+    }
+
+    private void onOK() {
+        // add your code here
+        dispose();
+    }
+
+    private void onCancel() {
+        // add your code here if necessary
+        dispose();
+    }
+    private void setModelsToTables() {
+        leftTable = new MiniTableModel();
+        table1.setModel(leftTable);
+
+        rightTable = new MiniTableModel();
+        table2.setModel(rightTable);
+    }
+
+    public static void main(String[] args) {
+        SecretDialog dialog = new SecretDialog(null);
+        dialog.pack();
+        dialog.setVisible(true);
+        System.exit(0);
+    }
+}
