@@ -19,14 +19,19 @@ public class MainWindow {
     private JTabbedPane tabbedPane1;
     private JPanel tabAgents;
     private JButton agentCreateButton;
-    private JTable tableMissions;
+    private JTable tableSecret;
     private JTable tableAgents;
+    private JTable tableMission;
     private JButton agentDeleteButton;
     private JButton agentUpdateButton;
     private JPanel tabMissions;
     private JButton missionCreateButton;
     private JButton missionDeleteButton;
     private JButton missionUpdateButton;
+    private JPanel tabAgentMission;
+    private JButton secretCreateButton;
+    private JButton secretDeleteButton;
+    private JButton secretUpdateButton;
     static MainWindow thisWindow;
     private MissionsTableModel modelMissions;
     private AgentsTableModel modelAgents;
@@ -80,7 +85,7 @@ public class MainWindow {
         agentCreateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new CreateDialog().setVisible(true);
+                new AgentDialog().setVisible(true);
             }
         });
 
@@ -88,7 +93,7 @@ public class MainWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (tableAgents.getSelectedRow() >= 0) {
-                    //new CreateDialog(modelAgents.getAgentAt(tableAgents.getSelectedRow())).setVisible(true);
+                    new AgentDialog(modelAgents.getAgentAt(tableAgents.getSelectedRow())).setVisible(true);
                 }
             }
         });
@@ -105,15 +110,15 @@ public class MainWindow {
         missionCreateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new MissionDialog().setVisible(true);
+                new MissionDialog().setVisible(true);
             }
         });
 
         missionUpdateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (tableMissions.getSelectedRow() >= 0) {
-                    //new MissionDialog(modelMissions.getMissionAt(tableMissions.getSelectedRow())).setVisible(true);
+                if (tableMission.getSelectedRow() >= 0) {
+                    new MissionDialog(modelMissions.getMissionAt(tableMission.getSelectedRow())).setVisible(true);
                 }
             }
         });
@@ -121,8 +126,8 @@ public class MainWindow {
         missionDeleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (tableMissions.getSelectedRow() >= 0) {
-                    modelMissions.removeAt(tableMissions.getSelectedRows());
+                if (tableMission.getSelectedRow() >= 0) {
+                    modelMissions.removeAt(tableMission.getSelectedRows());
                 }
             }
         });
@@ -232,7 +237,7 @@ public class MainWindow {
 
     private void setModelsToTables() {
         modelMissions = new MissionsTableModel();
-        tableMissions.setModel(modelMissions);
+        tableMission.setModel(modelMissions);
 
         modelAgents = new AgentsTableModel();
         tableAgents.setModel(modelAgents);

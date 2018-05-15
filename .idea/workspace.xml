@@ -2,78 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179c9aa8-b13c-4d9a-bcb2-44f4069aae2d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_commons_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_tree_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__classworlds_classworlds_1_1_alpha_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_intellij_forms_rt_7_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_intellij_javac2_7_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jgoodies_forms_1_1_preview.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jdom_jdom_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_manager_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_model_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_api_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_profile_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_project_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_repository_metadata_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_provider_api_1_0_alpha_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_ideauidesigner_maven_plugin_1_0_beta_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_container_default_1_0_alpha_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_1_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/AgentsTableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/LoadAgentsFromDBSwingWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/MainWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/MissionsTableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/SaveToDBSwingWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/swing/Bundle_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/swing/Bundle_pl_PL.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/swing/AgentDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/swing/CreateDialog.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AgentsSwingApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AgentsSwingApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/AgentManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/AgentManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/Mission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/Mission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/MissionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/MissionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/MissionManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/MissionManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/createTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/createTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Eng_lang.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Eng_lang.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/AgentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/AgentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/AgentManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/AgentManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/Mission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/Mission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/MissionAssignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/MissionAssignment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/MissionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/MissionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/MissionManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/MissionManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/SecretDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/SecretDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/SecretManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/SecretManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/SecretManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/SecretManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/createTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/createTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/AgentEdit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/AgentEdit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/AgentEdit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/AgentEdit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/Index.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainPage$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainPage$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainPage$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainPage$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainPage$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainPage$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainPage$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainPage$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MissionEdit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MissionEdit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MissionEdit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MissionEdit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/backend/AgentManagerImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/backend/AgentManagerImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/backend/MissionManagerImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/backend/MissionManagerImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/backend/SecretManagerImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/backend/SecretManagerImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" afterDir="false" />
     </list>
     <ignored path="AgentsSwingApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,11 +54,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SaveToDBSwingWorker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/swing/SaveToDBSwingWorker.java">
+      <file leaf-file-name="AgentDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="1425">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
+                <element signature="e#991#992#0" expanded="true" />
+                <element signature="e#1123#1124#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
+                <element signature="e#1302#1430#0" expanded="true" />
+                <element signature="e#1429#1430#0" expanded="true" />
+                <element signature="e#1584#1585#0" expanded="true" />
+                <element signature="e#1626#1627#0" expanded="true" />
+                <element signature="e#3037#3038#0" expanded="true" />
+                <element signature="e#3062#3063#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MissionDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+              <folding>
+                <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1079#1080#0" expanded="true" />
+                <element signature="e#1121#1122#0" expanded="true" />
+                <element signature="e#1258#1386#0" expanded="true" />
+                <element signature="e#1385#1386#0" expanded="true" />
+                <element signature="e#1540#1541#0" expanded="true" />
+                <element signature="e#1582#1583#0" expanded="true" />
+                <element signature="e#3706#3707#0" expanded="true" />
+                <element signature="e#3731#3732#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,57 +100,31 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="135">
+              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
                 <element signature="e#1340#1341#0" expanded="true" />
+                <element signature="e#2174#2175#0" expanded="true" />
+                <element signature="e#2240#2241#0" expanded="true" />
+                <element signature="e#3078#3079#0" expanded="true" />
+                <element signature="e#3146#3147#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadAgentsFromDBSwingWorker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/swing/LoadAgentsFromDBSwingWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
+      <file leaf-file-name="MissionDialog.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionDialog.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file leaf-file-name="MissionManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backend/MissionManager.java">
+      <file leaf-file-name="MainWindow.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.form">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MissionManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backend/MissionManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AgentManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backend/AgentManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-475">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createTables.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/createTables.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-end-line="21" />
+            <state relative-caret-position="163">
+              <caret line="192" column="39" selection-start-line="192" selection-start-column="39" selection-end-line="192" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -194,11 +138,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AGENT" pinned="false" current-in-tab="true">
-        <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="LocalDate.class" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/time/LocalDate.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-314">
+              <caret line="137" column="5" lean-forward="true" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+              <folding>
+                <element signature="e#4839#4840#0" expanded="true" />
+                <element signature="e#4907#4908#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateDialog.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/swing/CreateDialog.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="659">
+              <caret line="109" column="21" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -206,7 +168,7 @@
       <file leaf-file-name="AgentsTableModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentsTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
+            <state relative-caret-position="509">
               <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
               <folding>
                 <element signature="e#2159#2160#0" expanded="true" />
@@ -226,8 +188,9 @@
       <find>findAll</find>
       <find>Disk</find>
       <find>loadButtonText</find>
-      <find>Agent</find>
       <find>deleteAll</find>
+      <find>pv168/project/</find>
+      <find>Agent</find>
     </findStrings>
     <replaceStrings>
       <replace>agent</replace>
@@ -247,17 +210,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/Eng_lang.properties" />
         <option value="$PROJECT_DIR$/src/test/java/backend/AgentBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/backend/AgentManagerImplTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/backend/Mission.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/Index.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/MainPage.java" />
         <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle_en_US.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle_pl_PL.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" />
         <option value="$PROJECT_DIR$/src/main/java/swing/MissionsTableModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/LoadFromDBSwingWorker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/swing/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/LoadMissionsFromDBSwingWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/backend/Agent.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/AgentsTableModel.java" />
@@ -267,6 +227,13 @@
         <option value="$PROJECT_DIR$/src/main/java/swing/SaveToDBSwingWorker.java" />
         <option value="$PROJECT_DIR$/src/main/resources/createTables.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/console.sql" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/swing/CreateDialog.form" />
+        <option value="$PROJECT_DIR$/src/main/java/swing/AgentDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/swing/MissionDialog.form" />
+        <option value="$PROJECT_DIR$/src/main/java/swing/MissionDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/swing/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" />
       </list>
     </option>
   </component>
@@ -343,7 +310,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="swing" type="462c0819:PsiDirectoryNode" />
-              <item name="MainWindow" type="e9f4de52:FormNode" />
+              <item name="AgentDialog" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="SwingAgentsApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingAgentsApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="swing" type="462c0819:PsiDirectoryNode" />
+              <item name="MissionDialog" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="SwingAgentsApp" type="b2602c69:ProjectViewProjectNode" />
@@ -367,8 +343,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="368" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="424" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Derby (Remote)&#10;Derby (Embedded)&#10;DB2 (LUW)" />
@@ -382,8 +358,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/swing" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="C:\Users\Dima\Desktop\masar\SwingExample-skupiny-adamek\AgentsSwingApp\src\test" />
       <recent name="C:\Users\Dima\Desktop\masar\SwingExample-skupiny-adamek\AgentsSwingApp\src\main\resources" />
       <recent name="C:\Users\Dima\Desktop\masar\SwingExample-skupiny-adamek\AgentsSwingApp\src\main\java" />
@@ -707,46 +683,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526337064667</updated>
-      <workItem from="1526366780745" duration="8659000" />
+      <workItem from="1526366780745" duration="13151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8659000" />
+    <option name="totallyTimeSpent" value="13151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="881" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.03583618" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.16454081" />
       <window_info id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.090561226" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.28188777" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.13647959" />
       <window_info id="Capture Tool" order="1" />
-      <window_info active="true" anchor="bottom" id="Database Console" visible="true" weight="0.32908162" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.50510204" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.23057644" />
-      <window_info anchor="right" id="Database" order="1" visible="true" weight="0.24436091" />
-      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23057644" />
+      <window_info anchor="right" id="Database" order="1" weight="0.24436091" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.1734694" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.15178572" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.15178572" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -787,54 +763,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/SwingWorkerExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/GridBagLayoutDemo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/SwingWorkerExample2.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/TestFrame.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/BorderLayoutDemo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/SwingExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/SwingExample2.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/index.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/backend/SecretManager.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backend/AgentManager.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backend/MissionAssignment.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/backend/AgentBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/backend/MissionBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/backend/AgentManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="171" column="2" selection-start-line="171" selection-start-column="2" selection-end-line="171" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/backend/SecretDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1411">
@@ -852,20 +780,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backend/Mission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -970,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/swing/SwingWorker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -992,13 +898,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1023,17 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-552">
           <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentsTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
-          <folding>
-            <element signature="e#2159#2160#0" expanded="true" />
-            <element signature="e#2193#2194#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1072,17 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/swing/SaveToDBSwingWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1090,10 +967,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backend/AgentManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-475">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1104,6 +1030,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backend/AgentManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1697">
+          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentsTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
+          <folding>
+            <element signature="e#2159#2160#0" expanded="true" />
+            <element signature="e#2193#2194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="109" column="21" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/time/LocalDate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-314">
+          <caret line="137" column="5" lean-forward="true" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+          <folding>
+            <element signature="e#4839#4840#0" expanded="true" />
+            <element signature="e#4907#4908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1302#1430#0" expanded="true" />
+            <element signature="e#1429#1430#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1626#1627#0" expanded="true" />
+            <element signature="e#3037#3038#0" expanded="true" />
+            <element signature="e#3062#3063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1111,17 +1128,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/CreateDialog.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="953">
+          <caret line="144" column="51" selection-start-line="144" selection-start-column="51" selection-end-line="144" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionDialog.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="51" column="70" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backend/Mission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
+            <element signature="e#3078#3079#0" expanded="true" />
+            <element signature="e#3146#3147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+          <folding>
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1258#1386#0" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#3706#3707#0" expanded="true" />
+            <element signature="e#3731#3732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.form">
+      <provider editor-type-id="ui-designer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="192" column="39" selection-start-line="192" selection-start-column="39" selection-end-line="192" selection-end-column="39" />
         </state>
       </provider>
     </entry>
