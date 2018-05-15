@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class Agent {
 
+    public static final int COLUMNS_COUNT = 4;
     private Long id;
     private LocalDate born;
     private String level;

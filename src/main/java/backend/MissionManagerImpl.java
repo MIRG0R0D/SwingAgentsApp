@@ -49,18 +49,34 @@ public class MissionManagerImpl implements MissionManager {
         Connection con = null;
         try {
             con = ds.getConnection();
-            PreparedStatement ps = con.prepareStatement("insert into APP.MISSION(CODENAME, START, \"END\", DESCRIPTION, LOCATION) values (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            if(mis.getId() == null) {
+                PreparedStatement ps = con.prepareStatement("insert into APP.MISSION(CODENAME, START, \"END\", DESCRIPTION, LOCATION) values (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
-            ps.setString(1, mis.getCodeName());
-            ps.setDate(2, Date.valueOf(mis.getStart()));
-            ps.setDate(3, (mis.getEnd() == null) ? null : Date.valueOf(mis.getEnd()));
-            ps.setString(4, mis.getDescription());
-            ps.setString(5, mis.getLocation());
-            ps.executeUpdate();
-            ResultSet keys = ps.getGeneratedKeys();
-            if (keys.next()) {
-                long key = keys.getLong(1);
-                mis.setId(key);
+                ps.setString(1, mis.getCodeName());
+                ps.setDate(2, Date.valueOf(mis.getStart()));
+                ps.setDate(3, (mis.getEnd() == null) ? null : Date.valueOf(mis.getEnd()));
+                ps.setString(4, mis.getDescription());
+                ps.setString(5, mis.getLocation());
+                ps.executeUpdate();
+                ResultSet keys = ps.getGeneratedKeys();
+                if (keys.next()) {
+                    long key = keys.getLong(1);
+                    mis.setId(key);
+                }
+            }else{
+                PreparedStatement ps = con.prepareStatement("insert into APP.MISSION(ID ,CODENAME, START, \"END\", DESCRIPTION, LOCATION) values (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+                ps.setLong(1, mis.getId());
+                ps.setString(2, mis.getCodeName());
+                ps.setDate(3, Date.valueOf(mis.getStart()));
+                ps.setDate(4, (mis.getEnd() == null) ? null : Date.valueOf(mis.getEnd()));
+                ps.setString(5, mis.getDescription());
+                ps.setString(6, mis.getLocation());
+                ps.executeUpdate();
+                ResultSet keys = ps.getGeneratedKeys();
+                if (keys.next()) {
+                    long key = keys.getLong(1);
+                    mis.setId(key);
+                }
             }
         } catch (SQLException ex) {
             Logger.getLogger(MissionManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
@@ -233,6 +249,18 @@ public class MissionManagerImpl implements MissionManager {
         try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("DELETE from APP.MISSION WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setLong(1, id);
+            ps.executeUpdate();
+
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void deleteAllMissions() {
+        try (Connection con = ds.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("DELETE from APP.MISSION", Statement.RETURN_GENERATED_KEYS);
             ps.executeUpdate();
 
 

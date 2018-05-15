@@ -17,17 +17,16 @@ public class AgentManagerImpl implements AgentManager {
         this.ds = ds;
     }
 
-    private void check(Agent agent){
-        if(agent == null){
+    private void check(Agent agent) {
+        if (agent == null) {
             throw new IllegalArgumentException();
         }
 
-        if(agent.getName() == null || agent.getName().isEmpty() ||
+        if (agent.getName() == null || agent.getName().isEmpty() ||
                 agent.getLevel() == null || agent.getLevel().isEmpty() ||
-                agent.getBorn() == null ){
+                agent.getBorn() == null) {
             throw new IllegalArgumentException();
         }
-
 
 
     }
@@ -42,149 +41,169 @@ public class AgentManagerImpl implements AgentManager {
     public Long create(Agent agent) {
 
         check(agent);
+        if (agent.getId() == null) {
+            try (Connection con = ds.getConnection()) {
 
-        try (Connection con = ds.getConnection()) {
-            PreparedStatement ps = con.prepareStatement("insert into APP.AGENT(BORN, LEVEL, NAME) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-            ps.setDate(1, Date.valueOf(agent.getBorn()));
-            ps.setString(2, agent.getLevel());
-            ps.setString(3, agent.getName());
-            ps.executeUpdate();
-            ResultSet keys = ps.getGeneratedKeys();
-            if (keys.next()) {
-                long key = keys.getLong(1);
-                agent.setId(key);
+                PreparedStatement ps = con.prepareStatement("insert into APP.AGENT(BORN, LEVEL, NAME) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+                ps.setDate(1, Date.valueOf(agent.getBorn()));
+                ps.setString(2, agent.getLevel());
+                ps.setString(3, agent.getName());
+                ps.executeUpdate();
+                ResultSet keys = ps.getGeneratedKeys();
+                if (keys.next()) {
+                    long key = keys.getLong(1);
+                    agent.setId(key);
+                }
+
+            } catch (SQLException ex) {
+                Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
-        } 
-        return agent.getId();
-    }
+        }else{
+            try (Connection con = ds.getConnection()) {
 
-    /**
-     * finding some certain agent by it's id
-     *
-     * @param id ID of the agent
-     * @return Agent.class if found, null if not
-     */
-    @Override
-    public Agent findAgentById(Long id) {
+                PreparedStatement ps = con.prepareStatement("insert into APP.AGENT(ID ,BORN, LEVEL, NAME) values (?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+                ps.setLong(1, agent.getId());
+                ps.setDate(2, Date.valueOf(agent.getBorn()));
+                ps.setString(3, agent.getLevel());
+                ps.setString(4, agent.getName());
+                ps.executeUpdate();
+                ResultSet keys = ps.getGeneratedKeys();
+                if (keys.next()) {
+                    long key = keys.getLong(1);
+                    agent.setId(key);
+                }
 
-        if(id == null || id < 1){
-            throw new IllegalArgumentException();
+            } catch (SQLException ex) {
+                Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
+            }
+        }
+            return agent.getId();
         }
 
-        List<Agent> agents = new ArrayList<>();
-        try (Connection con = ds.getConnection()) {
-            PreparedStatement ps = con.prepareStatement("select * from APP.AGENT WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
-            ps.setLong(1, id);
-            ResultSet rs = ps.executeQuery();
+        /**
+         * finding some certain agent by it's id
+         *
+         * @param id ID of the agent
+         * @return Agent.class if found, null if not
+         */
+        @Override
+        public Agent findAgentById (Long id){
 
-            while (rs.next()) {
-                LocalDate bord = rs.getDate(2).toLocalDate();
-                String level = rs.getString(3);
-                String name = rs.getString(4);
-                Agent agent = new Agent(id, bord, level, name);
-                return agent;
+            if (id == null || id < 1) {
+                throw new IllegalArgumentException();
             }
 
-        } catch (SQLException ex) {
-            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
+            List<Agent> agents = new ArrayList<>();
+            try (Connection con = ds.getConnection()) {
+                PreparedStatement ps = con.prepareStatement("select * from APP.AGENT WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+                ps.setLong(1, id);
+                ResultSet rs = ps.executeQuery();
 
-    /**
-     * updating agent info
-     * ID and born date will not be changed
-     *
-     * @param id    id of the agent
-     * @param agent new Agent info
-     */
-    @Override
-    public void update(Long id, Agent agent) {
+                while (rs.next()) {
+                    LocalDate bord = rs.getDate(2).toLocalDate();
+                    String level = rs.getString(3);
+                    String name = rs.getString(4);
+                    Agent agent = new Agent(id, bord, level, name);
+                    return agent;
+                }
 
-        if(id == null || id < 1){
-            throw new IllegalArgumentException();
-        }
-
-        check(agent);
-
-        try (Connection con = ds.getConnection()){
-            
-            PreparedStatement ps = con.prepareStatement("UPDATE APP.AGENT " +
-                    "SET LEVEL = ?, NAME = ? " +
-                    "WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, agent.getLevel());
-            ps.setString(2, agent.getName());
-            ps.setLong(3, id);
-            ps.executeUpdate();
-            ResultSet keys = ps.getGeneratedKeys();
-            if (keys.next()) {
-                long key = keys.getLong(1);
-                agent.setId(key);
+            } catch (SQLException ex) {
+                Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing update: ", ex);
-        } 
+            return null;
+        }
 
-    }
+        /**
+         * updating agent info
+         * ID and born date will not be changed
+         *
+         * @param id    id of the agent
+         * @param agent new Agent info
+         */
+        @Override
+        public void update (Long id, Agent agent){
 
-
-
-    /**
-     * finding all existing agents
-     *
-     * @return full list of agents
-     */
-    @Override
-    public List<Agent> findAllAgents() {
-        List<Agent> agents = new ArrayList<>();
-        try (Connection con = ds.getConnection()) {
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM APP.AGENT");
-            while (rs.next()) {
-                Long id = rs.getLong(1);
-                LocalDate bord = rs.getDate(2).toLocalDate();
-                String level = rs.getString(3);
-                String name = rs.getString(4);
-                Agent agent = new Agent(id, bord, level, name);
-                agents.add(agent);
+            if (id == null || id < 1) {
+                throw new IllegalArgumentException();
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+
+            check(agent);
+
+            try (Connection con = ds.getConnection()) {
+
+                PreparedStatement ps = con.prepareStatement("UPDATE APP.AGENT " +
+                        "SET LEVEL = ?, NAME = ? " +
+                        "WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+                ps.setString(1, agent.getLevel());
+                ps.setString(2, agent.getName());
+                ps.setLong(3, id);
+                ps.executeUpdate();
+                ResultSet keys = ps.getGeneratedKeys();
+                if (keys.next()) {
+                    long key = keys.getLong(1);
+                    agent.setId(key);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing update: ", ex);
+            }
+
         }
-        return agents;
+
+
+        /**
+         * finding all existing agents
+         *
+         * @return full list of agents
+         */
+        @Override
+        public List<Agent> findAllAgents () {
+            List<Agent> agents = new ArrayList<>();
+            try (Connection con = ds.getConnection()) {
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM APP.AGENT");
+                while (rs.next()) {
+                    Long id = rs.getLong(1);
+                    LocalDate bord = rs.getDate(2).toLocalDate();
+                    String level = rs.getString(3);
+                    String name = rs.getString(4);
+                    Agent agent = new Agent(id, bord, level, name);
+                    agents.add(agent);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return agents;
+        }
+
+        @Override
+        public void deleteAgentById (Long id){
+            if (id == null || id < 1) {
+                throw new IllegalArgumentException();
+            }
+
+            try (Connection con = ds.getConnection()) {
+                PreparedStatement ps = con.prepareStatement("DELETE from APP.AGENT WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+                ps.setLong(1, id);
+                ps.executeUpdate();
+
+
+            } catch (SQLException ex) {
+                Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        @Override
+        public void deleteAllAgents () {
+
+            try (Connection con = ds.getConnection()) {
+                PreparedStatement ps = con.prepareStatement("DELETE from APP.AGENT", Statement.RETURN_GENERATED_KEYS);
+                ps.executeUpdate();
+
+
+            } catch (SQLException ex) {
+                Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+
     }
-
-    @Override
-    public void deleteAgentById(Long id) {
-        if(id == null || id < 1){
-            throw new IllegalArgumentException();
-        }
-
-        try (Connection con = ds.getConnection()) {
-            PreparedStatement ps = con.prepareStatement("DELETE from APP.AGENT WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
-            ps.setLong(1, id);
-            ps.executeUpdate();
-
-
-        } catch (SQLException ex) {
-            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @Override
-    public void deleteAllAgents() {
-       
-                try (Connection con = ds.getConnection()) {
-            PreparedStatement ps = con.prepareStatement("DELETE from APP.AGENT", Statement.RETURN_GENERATED_KEYS);
-            ps.executeUpdate();
-
-
-        } catch (SQLException ex) {
-            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-
-}

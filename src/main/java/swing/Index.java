@@ -62,7 +62,7 @@ public class Index {
             ds = new ClientDataSource();
             ds.setServerName("localhost");
             ds.setPortNumber(1527);
-            ds.setDatabaseName("AgentsDB");
+            ds.setDatabaseName("myDB");
         }
         return ds;
     }

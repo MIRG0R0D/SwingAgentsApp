@@ -63,7 +63,7 @@ public class MainPage extends JFrame {
         JScrollPane TextScrollPane = new JScrollPane(textArea);
 
         redrawAgents();
-        
+
         JScrollPane tableAgentsScrollPane = new JScrollPane(tableAgents);
 
 
@@ -109,7 +109,7 @@ public class MainPage extends JFrame {
         buttonPanel.add(newButton);
         buttonPanel.add(editButton);
         buttonPanel.add(deleteButton);
-        
+
         buttonPanel.add(refreshButton);
 
         c.anchor = GridBagConstraints.NORTHEAST; //params of the text area
@@ -149,9 +149,9 @@ public class MainPage extends JFrame {
         newButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 int select = tabbedPane.getSelectedIndex();
-                
+
                 if (select == 0) {
-                    
+
                     JFrame secondFrame = new AgentEdit(index, 0);
                 }
                 else {
@@ -160,7 +160,7 @@ public class MainPage extends JFrame {
 
             }
         } );
-        
+
         refreshButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 redrawAgents();
@@ -172,7 +172,7 @@ public class MainPage extends JFrame {
             public void actionPerformed( ActionEvent e ) {
                 int selectTab = tabbedPane.getSelectedIndex();
 
-                
+
                 if (selectTab == 0) {
                     Long id;
                     int[] selectedRows = tableAgents.getSelectedRows();
@@ -204,7 +204,7 @@ public class MainPage extends JFrame {
                 int select = tabbedPane.getSelectedIndex();
 
                 if (select == 0) {
-                    
+
                     Long id;
                     int[] selectedRows = tableAgents.getSelectedRows();
                     if (selectedRows.length == 1) {
@@ -214,7 +214,7 @@ public class MainPage extends JFrame {
                         JOptionPane.showMessageDialog(null, props.getProperty("choose_one_row"));
                         return;
                     }
-                    
+
                     Object[] options = {props.getProperty("yes"), props.getProperty("no")};
                     int n = JOptionPane
                             .showOptionDialog(null, props.getProperty("delete_agent"),
@@ -237,7 +237,7 @@ public class MainPage extends JFrame {
                         JOptionPane.showMessageDialog(null, props.getProperty("choose_one_row"));
                         return;
                     }
-                    
+
                     Object[] options = {props.getProperty("yes"), props.getProperty("no")};
                     int n = JOptionPane
                             .showOptionDialog(null, props.getProperty("delete_mission"),
@@ -282,7 +282,7 @@ public class MainPage extends JFrame {
                 currentSelectionLabel.setText(result);
             }
         });
-        
+
         ListSelectionModel selMissionModel = tableMissions.getSelectionModel();
 
         selMissionModel.addListSelectionListener(new ListSelectionListener() {
@@ -299,8 +299,8 @@ public class MainPage extends JFrame {
                     textArea.append(props.getProperty("location") + " : " + mission.getLocation() + System.lineSeparator());
                     textArea.append(props.getProperty("description") + " : " + mission.getDescription() + System.lineSeparator());
                 }}});
-        
-                
+
+
         frame.setPreferredSize(new Dimension(550, 600));
         frame.pack();
         frame.setLocationRelativeTo(null);
@@ -318,7 +318,7 @@ public class MainPage extends JFrame {
         List <Agent> list = am.findAllAgents();
         String[][] result = new String[list.size()][4];
         for (int i=0;i<list.size();i++){
-            
+
             result[i][0] = list.get(i).getId().toString();
             result[i][1] = list.get(i).getName();
             result[i][2] = list.get(i).getLevel();
@@ -326,12 +326,12 @@ public class MainPage extends JFrame {
         }
         TableModel dtm = new DefaultTableModel(result, agentColumnNames);
         tableAgents = new JTable(dtm);
-        
+
     }
-    
+
     public static void redrawMissions(){
         String[] missionColumnNames = {
-            
+
                 "id",
                 props.getProperty("code_name"),
                 props.getProperty("location")
@@ -340,15 +340,17 @@ public class MainPage extends JFrame {
         List <Mission> list = mm.getMissions();
         String[][] result = new String[list.size()][4];
         for (int i=0;i<list.size();i++){
-            
+
             result[i][0] = list.get(i).getId().toString();
             result[i][1] = list.get(i).getCodeName();
             result[i][2] = list.get(i).getLocation();
             result[i][3] = list.get(i).getDescription();
         }
         tableMissions = new JTable(result, missionColumnNames);
-        
+
     }
+
+
 
 /*
     private static void showMainWindow() {

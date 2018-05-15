@@ -17,4 +17,6 @@ public interface MissionManager {
     Mission getMission(Long id);
 
     void deleteMission(Long longId);
+
+    void deleteAllMissions();
 }
