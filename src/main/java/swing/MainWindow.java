@@ -133,54 +133,10 @@ public class MainWindow {
         });
 
         setModelsToTables();
-        setEditableCells();
     }
 
     private JMenuBar createMenu() {
-        //hlavní úroveň menu
-//        ResourceBundle rb = ResourceBundle.getBundle("swing.Bundle");
-//        JMenuBar menuBar = new JMenuBar();
-//        JMenu fileMenu = new JMenu(rb.getString("File"));
-//        final JMenu helpMenu = new JMenu(rb.getString("Help"));
-//        JMenu lafMenu = new JMenu(rb.getString("LaF"));
-//        menuBar.add(fileMenu);
-//        menuBar.add(lafMenu);
-//        menuBar.add(helpMenu);
-//        menuBar.add(Box.createHorizontalGlue());
-//
-//        //menu File
-//        JMenuItem exitMenuItem = new JMenuItem(rb.getString("Exit"));
-//        fileMenu.add(exitMenuItem);
-//        exitMenuItem.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                System.exit(1);
-//            }
-//        });
-//        //menu Help
-//        JMenuItem aboutMenuItem = new JMenuItem("About");
-//        helpMenu.add(aboutMenuItem);
-//        aboutMenuItem.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                JOptionPane.showMessageDialog(helpMenu, "Skvělá aplikace (c) Já", "About", JOptionPane.INFORMATION_MESSAGE);
-//            }
-//        });
-//        for (final UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-//            JMenuItem item = new JMenuItem(info.getName());
-//            lafMenu.add(item);
-//            item.addActionListener(new ActionListener() {
-//                @Override
-//                public void actionPerformed(ActionEvent ev) {
-//                    try {
-//                        UIManager.setLookAndFeel(info.getClassName());
-//                        SwingUtilities.updateComponentTreeUI(MainWindow.this.topPanel);
-//                    } catch (Exception ex) {
-//                        ex.printStackTrace();
-//                    }
-//                }
-//            });
-//        }
+
         return null;
     }
 
@@ -215,16 +171,18 @@ public class MainWindow {
         thisWindow.getModelAgents().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
-                if (thisWindow.isSaveAble())
-                    saveAllDataToDB();
+                if (thisWindow.isSaveAble()) {
+                    //saveAllDataToDB();
+                }
             }
         });
 
         thisWindow.getModelMissions().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
-                if (thisWindow.isSaveAble())
-                    saveAllDataToDB();
+                if (thisWindow.isSaveAble()) {
+                    //saveAllDataToDB();
+                }
             }
         });
     }
@@ -243,26 +201,7 @@ public class MainWindow {
         tableAgents.setModel(modelAgents);
     }
 
-    private void setEditableCells() {
-//        JComboBox genreComboBox = new JComboBox();
-//        for (GenreEnum f : GenreEnum.values()) {
-//            genreComboBox.addItem(f);
-//        }
-//        tableAgents.getColumnModel().getColumn(3).setCellEditor(new DefaultCellEditor(genreComboBox));
-//        tableMissions.getColumnModel().getColumn(3).setCellEditor(new DefaultCellEditor(genreComboBox));
-//
-//        JComboBox kindComboBox = new JComboBox();
-//        for (KindEnum f : KindEnum.values()) {
-//            kindComboBox.addItem(f);
-//        }
-//        tableMissions.getColumnModel().getColumn(4).setCellEditor(new DefaultCellEditor(kindComboBox));
-//
-//        JComboBox typeComboBox = new JComboBox();
-//        for (TypeEnum f : TypeEnum.values()) {
-//            typeComboBox.addItem(f);
-//        }
-//        tableMissions.getColumnModel().getColumn(5).setCellEditor(new DefaultCellEditor(typeComboBox));
-    }
+
 
     public static void loadAllDataFromDB() {
         LoadAgentsFromDBSwingWorker swingWorker = new LoadAgentsFromDBSwingWorker();
@@ -271,10 +210,7 @@ public class MainWindow {
         swingWorker.execute();
     }
 
-    public static void saveAllDataToDB() {
-        SaveToDBSwingWorker swingWorker = new SaveToDBSwingWorker();
-        swingWorker.execute();
-    }
+
 
 
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class MissionsTableModel extends AbstractTableModel{
+public class MissionsTableModel extends AbstractTableModel {
 
     final static Logger log = LoggerFactory.getLogger(MissionsTableModel.class);
 
@@ -32,14 +32,16 @@ public class MissionsTableModel extends AbstractTableModel{
         ResourceBundle rb = ResourceBundle.getBundle("swing.Bundle");
         switch (columnIndex) {
             case 0:
-                return rb.getString("codename");
+                return "id";
             case 1:
-                return rb.getString("start");
+                return rb.getString("codename");
             case 2:
-                return rb.getString("end");
+                return rb.getString("start");
             case 3:
-                return rb.getString("location");
+                return rb.getString("end");
             case 4:
+                return rb.getString("location");
+            case 5:
                 return rb.getString("description");
             default:
                 throw new IllegalArgumentException("columnIndex");
@@ -51,14 +53,16 @@ public class MissionsTableModel extends AbstractTableModel{
         Mission mission = missions.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return mission.getCodeName();
+                return mission.getId();
             case 1:
-                return mission.getStart();
+                return mission.getCodeName();
             case 2:
-                return mission.getEnd();
+                return mission.getStart();
             case 3:
-                return mission.getLocation();
+                return mission.getEnd();
             case 4:
+                return mission.getLocation();
+            case 5:
                 return mission.getDescription();
             default:
                 throw new IllegalArgumentException("columnIndex");
@@ -69,12 +73,14 @@ public class MissionsTableModel extends AbstractTableModel{
     public Class<?> getColumnClass(int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return String.class;
+                return Long.class;
             case 1:
+                return String.class;
             case 2:
-                return LocalDate.class;
             case 3:
+                return LocalDate.class;
             case 4:
+            case 5:
                 return String.class;
             default:
                 throw new IllegalArgumentException("columnIndex");
@@ -84,52 +90,46 @@ public class MissionsTableModel extends AbstractTableModel{
     public void addMission(Mission input) {
         missions.add(input);
         int lastRow = missions.size() - 1;
-
+        new SaveMissionToDBSwingWorker(input).execute();
         fireTableRowsInserted(lastRow, lastRow);
     }
 
-    public void editMission(Mission oldMission, Mission newMission)
-    {
-        if(missions.remove(oldMission))
-        {
+    public void editMission(Mission oldMission, Mission newMission) {
+        if (missions.remove(oldMission)) {
             missions.add(newMission);
+            new SaveMissionToDBSwingWorker(newMission).execute();
             fireTableDataChanged();
         }
     }
 
-    public void removeAll()
-    {
+    public void removeAll() {
         this.missions.clear();
     }
 
-    public List<Mission> getAll()
-    {
+    public List<Mission> getAll() {
         return missions;
     }
 
-    public Mission getMissionAt(int index)
-    {
+    public Mission getMissionAt(int index) {
         return missions.get(index);
     }
 
-    public void removeAt(int[] indexes)
-    {
-        if(indexes.length > 0)
-        {
+    public void removeAt(int[] indexes) {
+        if (indexes.length > 0) {
             log.info("Missions: " + missions.size());
             log.info("Selected: " + indexes.length);
 
-            for(Integer i =indexes.length-1;i>=0;i--){
+            for (Integer i = indexes.length - 1; i >= 0; i--) {
+                new DeleteMissionFromDBSwingWorker(missions.get(indexes[i])).execute();
                 missions.remove(indexes[i]);
             }
 
             int firstRow, lastRow;
-            if(indexes.length == 1)
+            if (indexes.length == 1)
                 firstRow = lastRow = indexes[0];
-            else
-            {
+            else {
                 firstRow = indexes[0];
-                lastRow = indexes[indexes.length-1];
+                lastRow = indexes[indexes.length - 1];
             }
 
             fireTableRowsDeleted(firstRow, lastRow);
@@ -142,18 +142,20 @@ public class MissionsTableModel extends AbstractTableModel{
         Mission mission = missions.get(rowIndex);
         switch (columnIndex) {
             case 0:
+                mission.setId((Long) aValue);
+            case 1:
                 mission.setCodeName((String) aValue);
                 break;
-            case 1:
+            case 2:
                 mission.setStart((LocalDate) aValue);
                 break;
-            case 2:
+            case 3:
                 mission.setEnd((LocalDate) aValue);
                 break;
-            case 3:
+            case 4:
                 mission.setLocation((String) aValue);
                 break;
-            case 4:
+            case 5:
                 mission.setDescription((String) aValue);
                 break;
             default:
@@ -170,6 +172,7 @@ public class MissionsTableModel extends AbstractTableModel{
             case 2:
             case 3:
             case 4:
+            case 5:
                 return true;
             default:
                 throw new IllegalArgumentException("columnIndex");

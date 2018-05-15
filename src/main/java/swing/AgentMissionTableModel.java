@@ -1,6 +1,8 @@
 package swing;
 
 import backend.Agent;
+import backend.Mission;
+import backend.MissionAssignment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,20 +12,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AgentsTableModel extends AbstractTableModel {
+public class AgentMissionTableModel extends AbstractTableModel {
 
-    final static Logger log = LoggerFactory.getLogger(AgentsTableModel.class);
+    final static Logger log = LoggerFactory.getLogger(AgentMissionTableModel.class);
 
-    private List<Agent> agents = new ArrayList<>();
+    private List<MissionAgent> missionAssignments = new ArrayList<>();
 
     @Override
     public int getRowCount() {
-        return agents.size();
+        return missionAssignments.size();
     }
 
     @Override
     public int getColumnCount() {
-        return Agent.COLUMNS_COUNT;
+        return 2;
     }
 
     @Override
@@ -32,13 +34,9 @@ public class AgentsTableModel extends AbstractTableModel {
         ResourceBundle rb = ResourceBundle.getBundle("swing.Bundle");
         switch (columnIndex) {
             case 0:
-                return "id";
+                return rb.getString("mission");
             case 1:
-                return rb.getString("name");
-            case 2:
-                return rb.getString("level");
-            case 3:
-                return rb.getString("born");
+                return rb.getString("agent");
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
@@ -46,16 +44,12 @@ public class AgentsTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Agent agent = agents.get(rowIndex);
+        MissionAgent missionAgent = missionAssignments.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return agent.getId();
+                return missionAgent.mission.getCodeName();
             case 1:
-                return agent.getName();
-            case 2:
-                return agent.getLevel();
-            case 3:
-                return agent.getBornToString();
+                return missionAgent.agent.getName();
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
@@ -65,46 +59,46 @@ public class AgentsTableModel extends AbstractTableModel {
     public Class<?> getColumnClass(int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return Long.class;
             case 1:
-            case 2:
                 return String.class;
-            case 3:
-                return LocalDate.class;
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
     }
 
-    public void addAgent(Agent input) {
-        agents.add(input);
-        int lastRow = agents.size() - 1;
-        new SaveAgentToDBSwingWorker(input).execute();
+    public void addMissionAgent(MissionAgent input) {
+        missionAssignments.add(input);
+        int lastRow = missionAssignments.size() - 1;
+
         fireTableRowsInserted(lastRow, lastRow);
     }
 
+    public void editMissionAgent(MissionAgent oldMission, MissionAgent newMission) {
+        if (missionAssignments.remove(oldMission)) {
+            missionAssignments.add(newMission);
+            fireTableDataChanged();
+        }
+    }
+
     public void removeAll() {
-        this.agents.clear();
+        this.missionAssignments.clear();
     }
 
-    public List<Agent> getAll() {
-        return this.agents;
+    public List<MissionAgent> getAll() {
+        return missionAssignments;
     }
 
-    public void removeAt(int index) {
-        new DeleteAgentFromDBSwingWorker(agents.get(index)).execute();
-        this.agents.remove(index);
-        fireTableRowsDeleted(index, index);
+    public MissionAgent getMissionAt(int index) {
+        return missionAssignments.get(index);
     }
 
     public void removeAt(int[] indexes) {
         if (indexes.length > 0) {
-            log.info("Agents: " + agents.size());
+            log.info("Missions: " + missionAssignments.size());
             log.info("Selected: " + indexes.length);
 
             for (Integer i = indexes.length - 1; i >= 0; i--) {
-                new DeleteAgentFromDBSwingWorker(agents.get(indexes[i])).execute();
-                agents.remove(indexes[i]);
+                missionAssignments.remove(indexes[i]);
             }
 
             int firstRow, lastRow;
@@ -119,33 +113,16 @@ public class AgentsTableModel extends AbstractTableModel {
         }
     }
 
-    public void editAgent(Agent oldAgent, Agent newAgent) {
-        if (agents.remove(oldAgent)) {
-            agents.add(newAgent);
-            new SaveAgentToDBSwingWorker(newAgent).execute();
-            fireTableDataChanged();
-        }
-    }
-
-    public Agent getAgentAt(int index) {
-        return agents.get(index);
-    }
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-        Agent agent = agents.get(rowIndex);
+        MissionAgent mission = missionAssignments.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                agent.setId((Long) aValue);
+                mission.agent = ((Agent) aValue);
                 break;
             case 1:
-                agent.setName((String) aValue);
-                break;
-            case 2:
-                agent.setLevel((String) aValue);
-                break;
-            case 3:
-                agent.setBorn((LocalDate) aValue);
+                mission.mission = ((Mission) aValue);
                 break;
             default:
                 throw new IllegalArgumentException("columnIndex");
@@ -158,8 +135,6 @@ public class AgentsTableModel extends AbstractTableModel {
         switch (columnIndex) {
             case 0:
             case 1:
-            case 2:
-            case 3:
                 return false;
             default:
                 throw new IllegalArgumentException("columnIndex");

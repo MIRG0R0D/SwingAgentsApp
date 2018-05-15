@@ -138,11 +138,7 @@ public class AgentManagerImpl implements AgentManager {
                 ps.setString(2, agent.getName());
                 ps.setLong(3, id);
                 ps.executeUpdate();
-                ResultSet keys = ps.getGeneratedKeys();
-                if (keys.next()) {
-                    long key = keys.getLong(1);
-                    agent.setId(key);
-                }
+
             } catch (SQLException ex) {
                 Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing update: ", ex);
             }

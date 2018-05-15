@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Mission {
 
-    public static final int COLUMNS_COUNT = 5;
+    public static final int COLUMNS_COUNT = 6;
     private Long id;
     private String codeName;
     private LocalDate start;

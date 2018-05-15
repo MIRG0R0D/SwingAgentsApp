@@ -72,11 +72,7 @@ public class MissionManagerImpl implements MissionManager {
                 ps.setString(5, mis.getDescription());
                 ps.setString(6, mis.getLocation());
                 ps.executeUpdate();
-                ResultSet keys = ps.getGeneratedKeys();
-                if (keys.next()) {
-                    long key = keys.getLong(1);
-                    mis.setId(key);
-                }
+
             }
         } catch (SQLException ex) {
             Logger.getLogger(MissionManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
@@ -123,11 +119,7 @@ public class MissionManagerImpl implements MissionManager {
             ps.setString(5, mis.getLocation());
             ps.setLong(6, id);
             ps.executeUpdate();
-            ResultSet keys = ps.getGeneratedKeys();
-            if (keys.next()) {
-                long key = keys.getLong(1);
-                mis.setId(key);
-            }
+
         } catch (SQLException ex) {
             Logger.getLogger(MissionManagerImpl.class.getName()).log(Level.SEVERE, "Error executing update: ", ex);
         } finally {

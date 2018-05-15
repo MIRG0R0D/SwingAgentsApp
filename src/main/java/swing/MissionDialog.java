@@ -115,12 +115,11 @@ public class MissionDialog extends JDialog {
 
         tfStart.setBackground(Color.white);
 
-        Mission tmp = new Mission(null, tfCodeName.getText(), dateStart, dateEnd, tfLocation.getText(), tfDescription.getText());
-
-
         if (inputMission == null) {
+            Mission tmp = new Mission(null, tfCodeName.getText(), dateStart, dateEnd, tfLocation.getText(), tfDescription.getText());
             MainWindow.thisWindow.getModelMissions().addMission(tmp);
         } else {
+            Mission tmp = new Mission(inputMission.getId(), tfCodeName.getText(), dateStart, dateEnd, tfLocation.getText(), tfDescription.getText());
             MainWindow.thisWindow.getModelMissions().editMission(inputMission, tmp);
         }
 

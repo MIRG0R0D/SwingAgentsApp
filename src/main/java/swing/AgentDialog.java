@@ -91,12 +91,12 @@ public class AgentDialog extends JDialog {
 
         tfBorn.setBackground(Color.white);
 
-        Agent tmp = new Agent(null, date,tfLevel.getText(), tfName.getText());
-
 
         if (inputAgent == null) {
+            Agent tmp = new Agent(null, date,tfLevel.getText(), tfName.getText());
             MainWindow.thisWindow.getModelAgents().addAgent(tmp);
         } else {
+            Agent tmp = new Agent(inputAgent.getId(), date,tfLevel.getText(), tfName.getText());
             MainWindow.thisWindow.getModelAgents().editAgent(inputAgent, tmp);
         }
 
