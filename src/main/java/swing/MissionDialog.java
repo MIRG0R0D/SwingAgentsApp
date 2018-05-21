@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class MissionDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
-    private JButton buttonCancel;
+    private JButton buttonAgents;
     private JTextField tfCodeName;
     private JTextField tfStart;
     private JTextField tfEnd;
@@ -34,9 +34,9 @@ public class MissionDialog extends JDialog {
             }
         });
 
-        buttonCancel.addActionListener(new ActionListener() {
+        buttonAgents.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                onCancel();
+                new SecretDialog(inputMission).setVisible(true);
             }
         });
 

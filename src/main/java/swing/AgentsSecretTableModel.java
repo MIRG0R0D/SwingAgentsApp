@@ -10,11 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class MiniTableModel extends AbstractTableModel {
+public class AgentsSecretTableModel extends AbstractTableModel {
 
-    final static Logger log = LoggerFactory.getLogger(MiniTableModel.class);
+    final static Logger log = LoggerFactory.getLogger(AgentsSecretTableModel.class);
+    public boolean saveToDB;
 
     private List<Agent> agents = new ArrayList<>();
+    public Long missionId;
+
+    public AgentsSecretTableModel(boolean saveToDB) {
+        this.saveToDB = saveToDB;
+    }
 
     @Override
     public int getRowCount() {
@@ -22,7 +28,9 @@ public class MiniTableModel extends AbstractTableModel {
     }
 
     @Override
-    public int getColumnCount() {return 1;}
+    public int getColumnCount() {
+        return 2;
+    }
 
     @Override
     public String getColumnName(int columnIndex) {
@@ -30,9 +38,9 @@ public class MiniTableModel extends AbstractTableModel {
         ResourceBundle rb = ResourceBundle.getBundle("swing.Bundle");
         switch (columnIndex) {
             case 0:
-                return rb.getString("name");
+                return "id";
             case 1:
-                return rb.getString("level");
+                return rb.getString("name");
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
@@ -43,9 +51,9 @@ public class MiniTableModel extends AbstractTableModel {
         Agent agent = agents.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return agent.getName();
+                return agent.getId();
             case 1:
-                return agent.getLevel();
+                return agent.getName();
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
@@ -54,8 +62,10 @@ public class MiniTableModel extends AbstractTableModel {
     @Override
     public Class<?> getColumnClass(int columnIndex) {
         switch (columnIndex) {
-            case 1: return String.class;
-            case 2: return String.class;
+            case 0:
+                return Long.class;
+            case 1:
+                return String.class;
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
@@ -64,6 +74,8 @@ public class MiniTableModel extends AbstractTableModel {
     public void addAgent(Agent input) {
         agents.add(input);
         int lastRow = agents.size() - 1;
+        if (saveToDB)
+            new AddAgentToMissionDBSwingWorker(input, missionId).execute();
         fireTableRowsInserted(lastRow, lastRow);
     }
 
@@ -76,6 +88,8 @@ public class MiniTableModel extends AbstractTableModel {
     }
 
     public void removeAt(int index) {
+        if (saveToDB)
+            new DeleteAgentFromMissionDBSwingWorker(agents.get(index), missionId).execute();
         this.agents.remove(index);
         fireTableRowsDeleted(index, index);
     }
@@ -86,6 +100,8 @@ public class MiniTableModel extends AbstractTableModel {
             log.info("Selected: " + indexes.length);
 
             for (Integer i = indexes.length - 1; i >= 0; i--) {
+                if (saveToDB)
+                    new DeleteAgentFromMissionDBSwingWorker(agents.get(indexes[i]), missionId).execute();
                 agents.remove(indexes[i]);
             }
 
@@ -98,13 +114,6 @@ public class MiniTableModel extends AbstractTableModel {
             }
 
             fireTableRowsDeleted(firstRow, lastRow);
-        }
-    }
-
-    public void editAgent(Agent oldAgent, Agent newAgent) {
-        if (agents.remove(oldAgent)) {
-            agents.add(newAgent);
-            fireTableDataChanged();
         }
     }
 
@@ -122,12 +131,6 @@ public class MiniTableModel extends AbstractTableModel {
             case 1:
                 agent.setName((String) aValue);
                 break;
-            case 2:
-                agent.setLevel((String) aValue);
-                break;
-            case 3:
-                agent.setBorn((LocalDate) aValue);
-                break;
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
@@ -137,10 +140,8 @@ public class MiniTableModel extends AbstractTableModel {
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
         switch (columnIndex) {
-            case 0:return false;
-            case 1:return false;
-            case 2:return false;
-            case 3:
+            case 0:
+            case 1:
                 return false;
             default:
                 throw new IllegalArgumentException("columnIndex");

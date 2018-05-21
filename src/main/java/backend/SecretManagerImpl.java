@@ -42,9 +42,7 @@ public class SecretManagerImpl implements SecretManager {
             throw new IllegalArgumentException();
         }
 
-        if(agent.getName() == null || agent.getName().isEmpty() ||
-                agent.getLevel() == null || agent.getLevel().isEmpty() ||
-                agent.getBorn() == null ){
+        if(agent.getId() == null){
             throw new IllegalArgumentException();
         }
     }
@@ -155,6 +153,33 @@ public class SecretManagerImpl implements SecretManager {
         mission.setEnd(LocalDate.now());
         missionManager.updateMission(mission.getId(), mission);
         
+    }
+
+    @Override
+    public void detachAgentFromMission(Agent agent, Mission mission) {
+        checkMission(mission);
+        checkAgent(agent);
+
+        Connection con = null;
+        try {
+            con = ds.getConnection();
+            PreparedStatement ps = con.prepareStatement("delete from APP.MISSION_ASSIGNMENT where MISSION_ID  = ? and AGENT_ID = ?", Statement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, mission.getId());
+            ps.setLong(2, agent.getId());
+            ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(SecretManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
+        } finally {
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(SecretManagerImpl.class.getName()).log(Level.SEVERE, "Error closing connection: ", ex);
+                }
+            }
+        }
+
     }
 
 

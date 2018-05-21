@@ -10,6 +10,7 @@ import javax.swing.event.TableModelListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -19,7 +20,6 @@ public class MainWindow {
     private JTabbedPane tabbedPane1;
     private JPanel tabAgents;
     private JButton agentCreateButton;
-    private JTable tableSecret;
     private JTable tableAgents;
     private JTable tableMission;
     private JButton agentDeleteButton;
@@ -28,10 +28,6 @@ public class MainWindow {
     private JButton missionCreateButton;
     private JButton missionDeleteButton;
     private JButton missionUpdateButton;
-    private JPanel tabAgentMission;
-    private JButton secretCreateButton;
-    private JButton secretDeleteButton;
-    private JButton secretUpdateButton;
     static MainWindow thisWindow;
     private MissionsTableModel modelMissions;
     private AgentsTableModel modelAgents;
@@ -49,7 +45,7 @@ public class MainWindow {
 
     private AgentManager agentManager;
     private MissionManager missionManager;
-    private SecretManager sercretManager;
+    private SecretManager secretManager;
 
     public AgentManager getAgentManager() {
         return agentManager;
@@ -67,6 +63,10 @@ public class MainWindow {
         return modelAgents;
     }
 
+    public SecretManager getSecretManager() {
+        return secretManager;
+    }
+
     public static ClientDataSource getDataSource() {
         if (ds == null) {
             ds = new ClientDataSource();
@@ -81,6 +81,7 @@ public class MainWindow {
 
         agentManager = new AgentManagerImpl(getDataSource());
         missionManager = new MissionManagerImpl(getDataSource());
+        secretManager = new SecretManagerImpl(getDataSource());
 
         agentCreateButton.addActionListener(new ActionListener() {
             @Override
@@ -168,23 +169,6 @@ public class MainWindow {
 
         loadAllDataFromDB();
 
-        thisWindow.getModelAgents().addTableModelListener(new TableModelListener() {
-            @Override
-            public void tableChanged(TableModelEvent e) {
-                if (thisWindow.isSaveAble()) {
-                    //saveAllDataToDB();
-                }
-            }
-        });
-
-        thisWindow.getModelMissions().addTableModelListener(new TableModelListener() {
-            @Override
-            public void tableChanged(TableModelEvent e) {
-                if (thisWindow.isSaveAble()) {
-                    //saveAllDataToDB();
-                }
-            }
-        });
     }
 
 
@@ -202,15 +186,12 @@ public class MainWindow {
     }
 
 
-
     public static void loadAllDataFromDB() {
         LoadAgentsFromDBSwingWorker swingWorker = new LoadAgentsFromDBSwingWorker();
         LoadMissionsFromDBSwingWorker swingWorker1 = new LoadMissionsFromDBSwingWorker();
         swingWorker1.execute();
         swingWorker.execute();
     }
-
-
 
 
 }
