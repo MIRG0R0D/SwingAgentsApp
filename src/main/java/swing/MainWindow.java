@@ -3,6 +3,7 @@ package swing;
 
 import backend.*;
 import org.apache.derby.jdbc.ClientDataSource;
+import sun.util.ResourceBundleEnumeration;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
@@ -11,6 +12,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 
@@ -149,13 +151,18 @@ public class MainWindow {
     }
 
     public static void main(String[] args) {
+        //Locale.setDefault(Locale.US);
+        Locale.setDefault(getLocale());
+        System.out.println(Locale.getAvailableLocales().toString());
+
         final ResourceBundle rb = ResourceBundle.getBundle("swing.Bundle");
+
         thisWindow = new MainWindow();
 
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JFrame frame = new JFrame("Secret");
+                JFrame frame = new JFrame(rb.getString("app_name"));
                 frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 frame.setContentPane(thisWindow.topPanel);
                 frame.setPreferredSize(new Dimension(800, 600));
@@ -169,6 +176,13 @@ public class MainWindow {
 
         loadAllDataFromDB();
 
+    }
+    public static Locale getLocale(){
+        String lang = Locale.getDefault().getLanguage();
+        if (lang.equals("ru")) return new Locale("ru","RU");
+        if (lang.equals("cs")) return new Locale("cs","CZ");
+        if (lang.equals("en")) return new Locale("en","US");
+        return new Locale("en","US");
     }
 
 

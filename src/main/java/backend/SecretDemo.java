@@ -18,7 +18,6 @@ public class SecretDemo {
         //agent_demo();
         //test1();
         //mis_demo();
-        //add_some_agents();
         mis_demo();
     
         
@@ -29,7 +28,7 @@ public class SecretDemo {
             ds = new ClientDataSource();
             ds.setServerName("localhost");
             ds.setPortNumber(1527);
-            ds.setDatabaseName("AgentsDB");
+            ds.setDatabaseName("MyDB");
         }
         return ds;
     }
@@ -42,32 +41,34 @@ public class SecretDemo {
     }
     
     private static void mis_demo(){
-        System.out.println("Mission demo \n");
-        missionManager.createMission(new Mission(null,"Cold ice",LocalDate.now(),null,"Egypt","Agents, u shulde find some ice for my Coca-cola"));
+        System.out.println("Add some missions \n");
+        Mission ice = new Mission(null,"Cold ice",LocalDate.now(),null,"Egypt","Agents, u shulde find some ice for my Coca-cola");
+        missionManager.createMission(ice);
         missionManager.createMission(new Mission(null,"Hot desert",LocalDate.now(),null,"Syberia","Does anyone have a heat-pack?"));
         missionManager.createMission(new Mission(null,"Exams",LocalDate.now(),null,"University","U really need to work on it"));
         missionManager.createMission(new Mission(null,"Flying potato",LocalDate.now(),null,"Belarus","Get me some potato"));
         missionManager.createMission(new Mission(null,"Dying world",LocalDate.now(),null,"Global","Doom's day soon"));
-        
+
+
+        System.out.println("adding agents");
+        Agent freak = new Agent(null, LocalDate.now(), "05", "John Freak");
+        Agent horse = new Agent(null, LocalDate.now(), "03", "Devis Horse");
+        agentManager.create(freak);
+        agentManager.create(horse);
+        agentManager.create(new Agent(null, LocalDate.now(), "25", "Jonny English"));
+        agentManager.create(new Agent(null, LocalDate.now(), "00", "James Bond"));
+        agentManager.create(new Agent(null, LocalDate.now(), "15", "Tom Ford"));
+        agentManager.create(new Agent(null, LocalDate.now(), "13", "Chuck Norris"));
+
+        System.out.println("adding mission - agents");
+        secretManager.attachAgentToMission(freak,ice);
+        secretManager.attachAgentToMission(horse,ice);
     }
     private static void clear_agents(){
         System.out.println("Delete all agents");
         try{
             
             agentManager.deleteAllAgents();
-        }catch (Exception e){ e.printStackTrace(); }
-        
-    }
-    private static void add_some_agents(){
-        System.out.println("adding agents");
-        try{
-            
-            agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "05", "John Freak"));
-            agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "03", "Devis Horse"));
-            agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "25", "Jonny English"));
-            agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "00", "James Bond"));
-            agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "15", "Tom Ford"));
-            agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "13", "Chuck Norris"));
         }catch (Exception e){ e.printStackTrace(); }
         
     }

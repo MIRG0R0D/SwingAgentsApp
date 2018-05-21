@@ -24,8 +24,10 @@ public class SecretDialog extends JDialog {
         mission = input;
         setContentPane(contentPane);
         setModal(true);
-        setPreferredSize(new Dimension(300, 250));
+        setPreferredSize(new Dimension(300, 500));
         getRootPane().setDefaultButton(buttonOK);
+
+        missionNameField.setText(mission.getCodeName());
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
