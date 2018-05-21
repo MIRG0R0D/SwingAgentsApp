@@ -1,23 +1,30 @@
 package swing;
 
 import backend.Mission;
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.UtilDateModel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.time.DateTimeException;
 import java.time.LocalDate;
+import java.util.Properties;
 
 public class MissionDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonAgents;
     private JTextField tfCodeName;
-    private JTextField tfStart;
-    private JTextField tfEnd;
     private JTextField tfLocation;
     private JTextField tfDescription;
+    private JPanel panelEnd;
+    private JPanel panelStart;
     private Mission inputMission = null;
+
+    private JDatePickerImpl datePickerStart;
+    private JDatePickerImpl datePickerEnd;
 
     public MissionDialog() {
         setContentPane(contentPane);
@@ -62,9 +69,22 @@ public class MissionDialog extends JDialog {
         inputMission = input;
 
         tfCodeName.setText(inputMission.getCodeName());
-        tfStart.setText(inputMission.getStart().toString());
-        if (inputMission.getEnd() != null)
-            tfEnd.setText(inputMission.getEnd().toString());
+        //tfStart.setText(inputMission.getStart().toString());
+        datePickerStart.getModel().setDay(input.getStart().getDayOfMonth());
+        datePickerStart.getModel().setMonth(input.getStart().getMonthValue()-1);
+        datePickerStart.getModel().setYear(input.getStart().getYear());
+        datePickerStart.getModel().setSelected(true);
+
+
+        if (inputMission.getEnd() != null) {
+            //tfEnd.setText(inputMission.getEnd().toString());
+            datePickerEnd.getModel().setDay(input.getEnd().getDayOfMonth());
+            datePickerEnd.getModel().setMonth(input.getEnd().getMonthValue() - 1);
+            datePickerEnd.getModel().setYear(input.getEnd().getYear());
+            datePickerEnd.getModel().setSelected(true);
+        }
+
+
         tfDescription.setText(inputMission.getDescription());
         tfLocation.setText(inputMission.getLocation());
     }
@@ -95,25 +115,26 @@ public class MissionDialog extends JDialog {
 
         LocalDate dateStart;
         try {
-            dateStart = LocalDate.parse(tfStart.getText());
+            dateStart = LocalDate.parse(datePickerStart.getJFormattedTextField().getText());
+            //dateStart = LocalDate.parse(tfStart.getText());
         } catch (DateTimeException e) {
-            tfStart.setBackground(Color.red);
+            datePickerStart.setBackground(Color.red);
             return;
         }
 
-        tfStart.setBackground(Color.white);
+        datePickerStart.setBackground(Color.white);
 
         LocalDate dateEnd = null;
-        if (tfEnd.getText().trim().length() > 0) {
+        if (datePickerEnd.getJFormattedTextField().getText().length() > 0) {
             try {
-                dateEnd = LocalDate.parse(tfEnd.getText());
+                dateEnd = LocalDate.parse(datePickerEnd.getJFormattedTextField().getText());
             } catch (DateTimeException e) {
-                tfEnd.setBackground(Color.red);
+                datePickerEnd.setBackground(Color.red);
                 return;
             }
         }
 
-        tfStart.setBackground(Color.white);
+        datePickerEnd.setBackground(Color.white);
 
         if (inputMission == null) {
             Mission tmp = new Mission(null, tfCodeName.getText(), dateStart, dateEnd, tfLocation.getText(), tfDescription.getText());
@@ -132,4 +153,20 @@ public class MissionDialog extends JDialog {
     }
 
 
+    private void createUIComponents() {
+        UtilDateModel modelStart = new UtilDateModel();
+        UtilDateModel modelEnd = new UtilDateModel();
+        Properties p = new Properties();
+        p.put("text.today", "Today");
+        p.put("text.month", "Month");
+        p.put("text.year", "Year");
+        JDatePanelImpl datePanelStart = new JDatePanelImpl(modelStart, p);
+        JDatePanelImpl datePanelEnd = new JDatePanelImpl(modelEnd, p);
+
+        datePickerStart = new JDatePickerImpl(datePanelStart, new DateLabelFormatter());
+        datePickerEnd = new JDatePickerImpl(datePanelEnd, new DateLabelFormatter());
+        panelStart = datePickerStart;
+        panelEnd = datePickerEnd;
+
+    }
 }

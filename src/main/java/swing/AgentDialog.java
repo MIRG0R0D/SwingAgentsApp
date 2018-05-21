@@ -19,7 +19,6 @@ public class AgentDialog extends JDialog {
     private JTextField tfName;
     private JTextField tfLevel;
     private JPanel panelBirth;
-    private JTextField tfBorn;
     private Agent inputAgent = null;
 
 
@@ -102,6 +101,7 @@ public class AgentDialog extends JDialog {
         try{
             date = LocalDate.parse(datePicker.getJFormattedTextField().getText());
         }catch (DateTimeException e){
+            datePicker.setBackground(Color.red);
             //tfBorn.setBackground(Color.red);
             return;
         }
@@ -128,30 +128,15 @@ public class AgentDialog extends JDialog {
 
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
 
-        System.out.println("CreateUI");
         UtilDateModel model = new UtilDateModel();
-
-        //model.setDate(1990, 8, 24);
-
         Properties p = new Properties();
         p.put("text.today", "Today");
         p.put("text.month", "Month");
         p.put("text.year", "Year");
-
-
-
         JDatePanelImpl datePanel = new JDatePanelImpl(model, p);
-        // Don't know about the formatter, but there it is...
 
         datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
-
-        //datePicker.getModel().setDate(2012, 1,1);
-
-        //datePicker.getModel().setSelected(true);
-
-
         panelBirth = datePicker;
 
     }
