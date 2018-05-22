@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/src/main/resources/swing/Bundle.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_en_US.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_pl_PL.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_ru.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_ru_RU.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/main/resources/swing/Bundle.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_en_US.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_pl_PL.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_ru.properties" />
+      <file value="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_ru_RU.properties" />
+      <base-name>Bundle</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>

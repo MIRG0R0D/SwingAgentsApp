@@ -3,31 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="179c9aa8-b13c-4d9a-bcb2-44f4069aae2d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/SecretManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/SecretManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/SecretManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/SecretManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MiniTableModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MissionDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MissionDialog.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MissionDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MissionDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/SecretDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/SecretDialog.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swing/SecretDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/SecretDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/SecretManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/SecretManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/SecretManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/SecretManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MissionDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MissionDialog$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MissionDialog$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MissionDialog$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MissionDialog$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MissionDialog$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swing/MissionDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/MissionDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/swing/SecretDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/SecretDialog$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/swing/SecretDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/SecretDialog$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/swing/SecretDialog$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/SecretDialog$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/swing/SecretDialog$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/SecretDialog$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/swing/SecretDialog$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/SecretDialog$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/swing/SecretDialog$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/SecretDialog$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/swing/SecretDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/swing/SecretDialog.class" afterDir="false" />
     </list>
     <ignored path="AgentsSwingApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,36 +73,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SecretDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/swing/SecretDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-              <folding>
-                <element signature="e#938#939#0" expanded="true" />
-                <element signature="e#976#977#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1150#1151#0" expanded="true" />
-                <element signature="e#2471#2472#0" expanded="true" />
-                <element signature="e#2513#2514#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MISSION_ASSIGNMENT" pinned="false" current-in-tab="false">
-        <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/MISSION_ASSIGNMENT">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DeleteAgentFromMissionDBSwingWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/swing/DeleteAgentFromMissionDBSwingWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="285">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
@@ -128,7 +85,7 @@
       <file leaf-file-name="SecretManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/backend/SecretManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
+            <state relative-caret-position="2385">
               <caret line="165" column="63" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
             </state>
           </provider>
@@ -137,31 +94,37 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="123" column="13" lean-forward="true" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="76" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.form" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+      <file leaf-file-name="Bundle.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle" />
+        </entry>
+      </file>
+      <file leaf-file-name="Bundle_cs_CZ.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
       <file leaf-file-name="AgentsSecretTableModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentsSecretTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-              <folding>
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#3589#3590#0" expanded="true" />
-                <element signature="e#3629#3630#0" expanded="true" />
-              </folding>
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -169,22 +132,8 @@
       <file leaf-file-name="LoadSecretFromDBSwingWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/swing/LoadSecretFromDBSwingWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="570">
               <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MissionDialog.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionDialog.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file leaf-file-name="SecretManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backend/SecretManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -230,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/test/java/backend/AgentManagerImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/Index.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/MainPage.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle_en_US.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle_pl_PL.properties" />
         <option value="$PROJECT_DIR$/src/main/java/swing/LoadFromDBSwingWorker.java" />
@@ -266,6 +214,8 @@
         <option value="$PROJECT_DIR$/src/main/java/swing/LoadSecretFromDBSwingWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/swing/MissionDialog.form" />
         <option value="$PROJECT_DIR$/src/main/java/swing/MainWindow.form" />
+        <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/swing/Bundle.properties" />
       </list>
     </option>
   </component>
@@ -283,7 +233,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="800" />
+    <option name="width" value="1600" />
     <option name="height" value="881" />
   </component>
   <component name="ProjectView">
@@ -291,9 +241,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -342,15 +291,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="swing" type="462c0819:PsiDirectoryNode" />
-              <item name="AgentDialog" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="SwingAgentsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SwingAgentsApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swing" type="462c0819:PsiDirectoryNode" />
               <item name="MainWindow" type="e9f4de52:FormNode" />
             </path>
             <path>
@@ -358,24 +298,6 @@
               <item name="SwingAgentsApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swing" type="462c0819:PsiDirectoryNode" />
-              <item name="MissionDialog" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="SwingAgentsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SwingAgentsApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swing" type="462c0819:PsiDirectoryNode" />
-              <item name="SecretDialog" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="SwingAgentsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SwingAgentsApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,11 +307,21 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="swing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingAgentsApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingAgentsApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="swing" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource Bundle 'Bundle'" type="a6c14932:ResourceBundleNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -735,12 +667,13 @@
       <updated>1526337064667</updated>
       <workItem from="1526366780745" duration="13151000" />
       <workItem from="1526396672552" duration="560000" />
-      <workItem from="1526818386488" duration="5336000" />
+      <workItem from="1526818386488" duration="5998000" />
+      <workItem from="1526973711141" duration="1348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22863000" />
+    <option name="totallyTimeSpent" value="24873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="881" extended-state="0" />
@@ -755,11 +688,10 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.22193877" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.11862245" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.26658162" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.26624203" />
       <window_info id="Capture Tool" order="1" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.16454081" />
       <window_info anchor="right" id="Designer" order="4" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.21052632" />
       <window_info anchor="right" id="Database" order="1" weight="0.69849247" />
@@ -774,38 +706,39 @@
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.16454081" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.1734694" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.50510204" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23057644" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.28188777" />
       <window_info id="Image Layers" order="0" />
       <window_info anchor="right" id="Designer" order="4" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.1734694" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="right" id="Database" order="1" weight="0.24436091" />
       <window_info id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.13647959" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.15178572" />
       <window_info id="Capture Tool" order="1" />
-      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.1734694" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.16454081" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -839,7 +772,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/swing/AgentDialog.java</url>
-          <line>94</line>
+          <line>112</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
@@ -917,7 +850,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/swing/SecretDialog.java</url>
-          <line>44</line>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
@@ -942,27 +875,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b79aedcd-1fed-4ace-a8f1-5aab19ffdda3/schema/APP/table/AGENT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/createTables.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1136,16 +1048,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MiniTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/SecretDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MiniTableModel.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/backend/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1214,10 +1117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="969" column="15" selection-start-line="969" selection-start-column="15" selection-end-line="969" selection-end-column="15" />
-          <folding>
-            <element signature="e#34788#34789#0" expanded="true" />
-            <element signature="e#34853#34854#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1244,15 +1143,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/swing/SecretDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+        <state relative-caret-position="15">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
           <folding>
             <element signature="e#938#939#0" expanded="true" />
             <element signature="e#976#977#0" expanded="true" />
             <element signature="e#1108#1109#0" expanded="true" />
             <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#2471#2472#0" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
+            <element signature="e#2203#2331#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1266,7 +1165,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/swing/DeleteAgentFromMissionDBSwingWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="285">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
@@ -1274,45 +1173,62 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/swing/AgentsSecretTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding>
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#3589#3590#0" expanded="true" />
-            <element signature="e#3629#3630#0" expanded="true" />
-          </folding>
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/backend/SecretManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
+        <state relative-caret-position="2385">
           <caret line="165" column="63" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/swing/LoadSecretFromDBSwingWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="570">
           <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MissionDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_pl_PL.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_en_US.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_ru_RU.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_ru.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="123" column="13" lean-forward="true" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="76" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/swing/MainWindow.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle_cs_CZ.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/swing/Bundle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
   </component>
   <component name="masterDetails">

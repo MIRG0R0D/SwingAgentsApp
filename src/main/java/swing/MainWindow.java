@@ -70,11 +70,12 @@ public class MainWindow {
     }
 
     public static ClientDataSource getDataSource() {
+        final ResourceBundle rb = ResourceBundle.getBundle("swing.Bundle");
         if (ds == null) {
             ds = new ClientDataSource();
-            ds.setServerName("localhost");
-            ds.setPortNumber(1527);
-            ds.setDatabaseName("myDB");
+            ds.setServerName(rb.getString("server_name"));
+            ds.setPortNumber(Integer.valueOf(rb.getString("port_number")));
+            ds.setDatabaseName(rb.getString("database_name"));
         }
         return ds;
     }
