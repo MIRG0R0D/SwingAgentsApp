@@ -154,6 +154,7 @@ public class MainWindow {
     public static void main(String[] args) {
         //Locale.setDefault(Locale.US);
         Locale.setDefault(getLocale());
+        //Locale.setDefault(new Locale ("cs","CZ"));
         System.out.println(Locale.getAvailableLocales().toString());
 
         final ResourceBundle rb = ResourceBundle.getBundle("swing.Bundle");

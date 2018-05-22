@@ -21,10 +21,14 @@ public class SecretDialog extends JDialog {
     private AgentsSecretTableModel agentsWithoutMission;
 
     public SecretDialog(Mission input) {
+        setPreferredSize(new Dimension(500, 600));
+
+        pack();
         mission = input;
         setContentPane(contentPane);
         setModal(true);
-        setPreferredSize(new Dimension(300, 500));
+
+
         getRootPane().setDefaultButton(buttonOK);
 
         missionNameField.setText(mission.getCodeName());
